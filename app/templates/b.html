@@ -5,16 +5,65 @@
 <html>
 	<head>
 		<title></title>
-
-		<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="{% static '/vendors/bootstrap/css/bootstrap.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
-
 		<script src="{% static '/vendors/jquery/jquery-3.3.1.min.js' %}"></script>
 		<script src="{% static '/vendors/jquery-ui/jquery-ui.min.js' %}"></script>
 	</head>
+  <style>
+    body {
+      margin: 10px;
+    }
+    
+    .grid {
+      margin: 50 auto;
+      width: 20vw;
+      height: 20vw;
+    }
+    
+    .row {
+      display: flex;
+    }
+    
+    .box {
+      background: green;
+      margin: 20px;
+      flex: 0 0 75%;
+      flex-wrap: nowrap;
+      position: static;
+    }
+    
+    #green { 
+      background: green;
+    }
+    
+    #white {
+      background: white;
+    }
+    
+    .box:after {
+      content: "";
+      float:right;
+      padding-top: 100%;
+    }
+}
+  </style>
 	<body>
-		<!-- Your layout here -->
+		<div class="grid">
+    <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+  
+    <div class="row">
+      <div class="box" id="white"></div>
+        <div class="box" id="white"></div>
+        <div class="box"></div>
+        <div class="box" id="white"></div>
+        <div class="box" id="white"></div> 
+    </div>
+   
 
 	</body>
 </html>
